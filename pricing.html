@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="theme-seafoam.css?v=1">
   <link rel="stylesheet" href="reference-match.css?v=1">
   <link rel="stylesheet" href="site-final.css?v=20261118b0261118b">
+  <style>
+    #onetime-panel .vm-due-today { font-size: 12.5px; line-height: 1.45; }
+  </style>
 </head>
 <body>
   <header class="ref-site-header"><div class="ref-header-inner">
@@ -62,9 +65,9 @@
       </div>
       <div id="onetime-panel" class="vm-package-panel" hidden>
         <div class="vm-plan-grid">
-          <article class="vm-plan-card"><div class="vm-plan-head"><h2>Starter</h2><p>A professional website<br>to get you online.</p></div><div class="vm-plan-details"><p class="vm-plan-price"><strong>$499</strong><span>one time</span></p><ul><li>3-Page Website</li><li>Professional design</li><li>Mobile-friendly</li><li>Website files included</li></ul><button type="button" class="vm-plan-button" data-checkout="starter-onetime">Choose This Plan <span aria-hidden="true">»</span></button><p class="vm-due-today"><strong>Hosting &amp; maintenance optional: $39/month.</strong> Not included in the one-time price. You may arrange your own hosting.</p></div></article>
-          <article class="vm-plan-card vm-plan-featured"><div class="vm-plan-popular">Most Popular</div><div class="vm-plan-head"><h2>Business</h2><p>A feature-rich website<br>to grow your business.</p></div><div class="vm-plan-details"><p class="vm-plan-price"><strong>$749</strong><span>one time</span></p><ul><li>5-Page Website</li><li>Custom design</li><li>Mobile-friendly</li><li>Website files included</li></ul><button type="button" class="vm-plan-button" data-checkout="business-onetime">Choose This Plan <span aria-hidden="true">»</span></button><p class="vm-due-today"><strong>Hosting &amp; maintenance optional: $39/month.</strong> Not included in the one-time price. You may arrange your own hosting.</p></div></article>
-          <article class="vm-plan-card"><div class="vm-plan-head"><h2>Premium</h2><p>A complete website with<br>more features and flexibility.</p></div><div class="vm-plan-details"><p class="vm-plan-price"><strong>$999</strong><span>one time</span></p><ul><li>7-Page Website</li><li>Enhanced features</li><li>Mobile-friendly</li><li>Website files included</li></ul><button type="button" class="vm-plan-button" data-checkout="premium-onetime">Choose This Plan <span aria-hidden="true">»</span></button><p class="vm-due-today"><strong>Hosting &amp; maintenance optional: $39/month.</strong> Not included in the one-time price. You may arrange your own hosting.</p></div></article>
+          <article class="vm-plan-card"><div class="vm-plan-head"><h2>Starter</h2><p>A professional website<br>to get you online.</p></div><div class="vm-plan-details"><p class="vm-plan-price"><strong>$499</strong><span>one time</span></p><ul><li>3-Page Website</li><li>Professional design</li><li>Mobile-friendly</li><li>Website files included</li></ul><button type="button" class="vm-plan-button" data-checkout="starter-onetime">Choose This Plan <span aria-hidden="true">»</span></button><p class="vm-due-today"><strong>Optional Hosting &amp; Maintenance: Just $39/month.</strong> Includes secure hosting, maintenance, tech support, and 30 minutes of monthly updates. Choose your own host or add our plan below after purchasing your website.</p></div></article>
+          <article class="vm-plan-card vm-plan-featured"><div class="vm-plan-popular">Most Popular</div><div class="vm-plan-head"><h2>Business</h2><p>A feature-rich website<br>to grow your business.</p></div><div class="vm-plan-details"><p class="vm-plan-price"><strong>$749</strong><span>one time</span></p><ul><li>5-Page Website</li><li>Custom design</li><li>Mobile-friendly</li><li>Website files included</li></ul><button type="button" class="vm-plan-button" data-checkout="business-onetime">Choose This Plan <span aria-hidden="true">»</span></button><p class="vm-due-today"><strong>Optional Hosting &amp; Maintenance: Just $39/month.</strong> Includes secure hosting, maintenance, tech support, and 30 minutes of monthly updates. Choose your own host or add our plan below after purchasing your website.</p></div></article>
+          <article class="vm-plan-card"><div class="vm-plan-head"><h2>Premium</h2><p>A complete website with<br>more features and flexibility.</p></div><div class="vm-plan-details"><p class="vm-plan-price"><strong>$999</strong><span>one time</span></p><ul><li>7-Page Website</li><li>Enhanced features</li><li>Mobile-friendly</li><li>Website files included</li></ul><button type="button" class="vm-plan-button" data-checkout="premium-onetime">Choose This Plan <span aria-hidden="true">»</span></button><p class="vm-due-today"><strong>Optional Hosting &amp; Maintenance: Just $39/month.</strong> Includes secure hosting, maintenance, tech support, and 30 minutes of monthly updates. Choose your own host or add our plan below after purchasing your website.</p></div></article>
         </div>
       </div>
       <div class="vm-price-offer" id="monthly-promo"><strong>Your First <em>90 Days Are Included</em></strong><span>Your upfront payment covers website creation, hosting, and maintenance for the first 90 days. Automatic monthly billing starts after 90 days.</span></div>
@@ -76,7 +79,7 @@
     </section>
 
     <section class="vm-hosting-section" aria-labelledby="hosting-title">
-      <div class="vm-hosting-inner"><div class="vm-hosting-copy"><h2 id="hosting-title">Everything You<br><span class="vm-need-line">Need to</span><br><span class="vm-stay-line">Stay Online</span></h2><p>Keep your website running smoothly with our hosting and maintenance plan.</p></div>
+      <div class="vm-hosting-inner"><div class="vm-hosting-copy"><h2 id="hosting-title">Everything<br><span class="vm-need-line">You Need To</span><br><span class="vm-stay-line">Stay Online</span></h2><p>Keep your website running smoothly with our hosting and maintenance plan.</p></div>
         <div class="vm-hosting-items">
           <div><span class="vm-hosting-icon" aria-hidden="true">▤</span><strong>Reliable<br>Hosting</strong></div>
           <div><span class="vm-hosting-icon" aria-hidden="true">⚙</span><strong>Ongoing<br>Maintenance</strong></div>
@@ -101,8 +104,8 @@
     <p id="checkout-choice" class="vm-checkout-choice"></p>
     <dl class="vm-checkout-summary"><div><dt>Ongoing plan price</dt><dd id="checkout-price"></dd></div><div><dt>Initial 90-day package</dt><dd id="checkout-setup"></dd></div><div class="vm-checkout-total"><dt>Due today</dt><dd id="checkout-due"></dd></div></dl>
     <p id="checkout-subscription-note" class="vm-checkout-extra">Your initial payment covers website creation and the first 90 days of service. Automatic monthly billing starts after 90 days.</p>
-    <p id="checkout-onetime-hosting-note" class="vm-checkout-extra" hidden><strong>Optional Hosting &amp; Maintenance:</strong> $39/month, billed separately and not included in your one-time website purchase. You can arrange your own hosting instead.</p>
     <p class="vm-checkout-policy">Payment comes first. I’ll review your project requirements before work begins. If your request is outside the purchased package, we’ll discuss an upgrade or provide a full refund before starting.</p>
+    <p id="checkout-onetime-hosting-note" class="vm-checkout-extra" hidden>We also offer <strong>Optional Hosting &amp; Maintenance for just $39/month.</strong> Every website needs hosting to be accessible online. Our plan includes secure hosting, routine maintenance, technical support, and up to 30 minutes of minor website revisions each month. After purchasing your website, return to our Pricing page to subscribe. We’ll apply the service to your new website. You’re also welcome to arrange your own hosting.</p>
     <label class="vm-checkout-consent"><input type="checkbox" id="checkout-acknowledge"> I understand the package scope and billing terms.</label>
     <button type="button" id="checkout-continue" class="vm-coral-btn vm-checkout-next" disabled>Continue to Secure Checkout →</button>
     <p id="checkout-message" class="vm-checkout-message" role="status" aria-live="polite"></p>
