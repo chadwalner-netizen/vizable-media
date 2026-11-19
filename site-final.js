@@ -48,8 +48,13 @@
         byId('checkout-price').textContent = choice.price;
         byId('checkout-due').textContent = choice.due;
         byId('checkout-setup').textContent = choice.setup;
-        byId('checkout-setup').parentElement.querySelector('dt').textContent = selectedPackage.endsWith('-monthly') ? 'Initial 90-day package' : 'Additional setup fee';
-        byId('checkout-subscription-note').hidden = !selectedPackage.endsWith('-monthly');
+        const isMonthly = selectedPackage.endsWith('-monthly');
+        const setupRow = byId('checkout-setup').parentElement;
+        setupRow.hidden = !isMonthly;
+        setupRow.querySelector('dt').textContent = 'Initial 90-day package';
+        byId('checkout-price').parentElement.querySelector('dt').textContent = isMonthly ? 'Ongoing plan price' : 'Website purchase';
+        byId('checkout-subscription-note').hidden = !isMonthly;
+        byId('checkout-onetime-hosting-note').hidden = isMonthly;
         checkoutAcknowledge.checked = false;
         checkoutContinue.disabled = true;
         checkoutMessage.textContent = '';
