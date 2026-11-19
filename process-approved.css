@@ -312,3 +312,6 @@
 @media (prefers-reduced-motion: reduce) {
   .approved-callback-button { transition: none; }
 }
+
+/* Keep the consultation link visually identical to the former button. */
+a.approved-callback-button { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }

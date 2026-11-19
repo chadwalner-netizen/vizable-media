@@ -249,3 +249,8 @@ body:has(.contact-main) .contact-main{padding-bottom:60px}
 .treat-cta .button{margin-top:18px}
 
 .demo{background:#fff3cd!important;color:#3d3110!important;text-align:center!important;padding:9px 12px!important;font:600 13px/1.4 Arial,Helvetica,sans-serif!important;letter-spacing:normal!important}.demo a{color:#064a31!important;text-decoration:underline!important;font:inherit!important}
+
+/* Contact info: optically centered, fuller-sized gold line icons. */
+.contact-info .info-icon{display:grid;place-items:center;width:66px;height:66px;min-width:66px;box-sizing:border-box;padding:0}
+.contact-info .info-icon svg.contact-icon{display:block;width:46px;height:46px;min-width:46px;stroke-width:1.7;overflow:visible;margin:0}
+@media(max-width:570px){.contact-info .info-icon{width:60px;height:60px;min-width:60px}.contact-info .info-icon svg.contact-icon{width:43px;height:43px;min-width:43px}}
