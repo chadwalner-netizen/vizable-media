@@ -3,9 +3,9 @@
   const config = window.VIZABLE_CONFIG || { formEndpoint: '', checkoutLinks: {} };
   const byId = id => document.getElementById(id);
   const priceData = {
-    'starter-monthly': {name:'Starter',mode:'Monthly Subscription',price:'$59/month',setup:'$125',due:'$184'},
-    'business-monthly': {name:'Business',mode:'Monthly Subscription',price:'$79/month',setup:'$175',due:'$254'},
-    'premium-monthly': {name:'Premium',mode:'Monthly Subscription',price:'$99/month',setup:'$297',due:'$396'},
+    'starter-monthly': {name:'Starter',mode:'Monthly Subscription',price:'$59/month',setup:'$184',due:'$184'},
+    'business-monthly': {name:'Business',mode:'Monthly Subscription',price:'$79/month',setup:'$254',due:'$254'},
+    'premium-monthly': {name:'Premium',mode:'Monthly Subscription',price:'$99/month',setup:'$396',due:'$396'},
     'starter-onetime': {name:'Starter',mode:'One-Time Purchase',price:'$499',setup:'None',due:'$499'},
     'business-onetime': {name:'Business',mode:'One-Time Purchase',price:'$749',setup:'None',due:'$749'},
     'premium-onetime': {name:'Premium',mode:'One-Time Purchase',price:'$999',setup:'None',due:'$999'}
@@ -48,6 +48,7 @@
         byId('checkout-price').textContent = choice.price;
         byId('checkout-due').textContent = choice.due;
         byId('checkout-setup').textContent = choice.setup;
+        byId('checkout-setup').parentElement.querySelector('dt').textContent = selectedPackage.endsWith('-monthly') ? 'Initial 90-day package' : 'Additional setup fee';
         byId('checkout-subscription-note').hidden = !selectedPackage.endsWith('-monthly');
         checkoutAcknowledge.checked = false;
         checkoutContinue.disabled = true;

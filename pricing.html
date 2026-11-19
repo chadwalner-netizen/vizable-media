@@ -38,7 +38,7 @@
             <div class="vm-plan-details"><p class="vm-plan-price"><strong>$59</strong><span>/month</span></p>
               <ul><li>3-Page Website</li><li>Professional design</li><li>Mobile-friendly</li><li>Hosting &amp; updates</li></ul>
               <button type="button" class="vm-plan-button" data-checkout="starter-monthly">Choose This Plan <span aria-hidden="true">»</span></button>
-              <p class="vm-due-today">$125 setup + first month = <strong>$184 due today</strong></p>
+              <p class="vm-due-today"><strong>$184 due today</strong> — includes website creation and your first 90 days. $59/month begins afterward.</p>
             </div>
           </article>
           <article class="vm-plan-card vm-plan-featured">
@@ -47,7 +47,7 @@
             <div class="vm-plan-details"><p class="vm-plan-price"><strong>$79</strong><span>/month</span></p>
               <ul><li>5-Page Website</li><li>Custom design</li><li>Mobile-friendly</li><li>Hosting &amp; updates</li></ul>
               <button type="button" class="vm-plan-button" data-checkout="business-monthly">Choose This Plan <span aria-hidden="true">»</span></button>
-              <p class="vm-due-today">$175 setup + first month = <strong>$254 due today</strong></p>
+              <p class="vm-due-today"><strong>$254 due today</strong> — includes website creation and your first 90 days. $79/month begins afterward.</p>
             </div>
           </article>
           <article class="vm-plan-card">
@@ -55,7 +55,7 @@
             <div class="vm-plan-details"><p class="vm-plan-price"><strong>$99</strong><span>/month</span></p>
               <ul><li>7-Page Website</li><li>Enhanced features</li><li>Mobile-friendly</li><li>Hosting &amp; updates</li></ul>
               <button type="button" class="vm-plan-button" data-checkout="premium-monthly">Choose This Plan <span aria-hidden="true">»</span></button>
-              <p class="vm-due-today">$297 setup + first month = <strong>$396 due today</strong></p>
+              <p class="vm-due-today"><strong>$396 due today</strong> — includes website creation and your first 90 days. $99/month begins afterward.</p>
             </div>
           </article>
         </div>
@@ -67,9 +67,9 @@
           <article class="vm-plan-card"><div class="vm-plan-head"><h2>Premium</h2><p>A complete website with<br>more features and flexibility.</p></div><div class="vm-plan-details"><p class="vm-plan-price"><strong>$999</strong><span>one time</span></p><ul><li>7-Page Website</li><li>Enhanced features</li><li>Mobile-friendly</li><li>Website files included</li></ul><button type="button" class="vm-plan-button" data-checkout="premium-onetime">Choose This Plan <span aria-hidden="true">»</span></button><p class="vm-due-today">No website subscription required</p></div></article>
         </div>
       </div>
-      <div class="vm-price-offer" id="monthly-promo"><strong>All Monthly Plans Include <em>2 FREE Months!</em></strong><span>Pay the setup fee and first month today; months 2 and 3 are free. Regular monthly billing resumes in month 4.</span></div>
+      <div class="vm-price-offer" id="monthly-promo"><strong>Your First <em>90 Days Are Included</em></strong><span>Your upfront payment covers website creation, hosting, and maintenance for the first 90 days. Automatic monthly billing starts after 90 days.</span></div>
       <details class="vm-price-terms"><summary>Package details, ownership &amp; billing terms</summary><div class="vm-terms-content">
-        <p><strong>Monthly plans:</strong> The setup fee plus first month are due when you order. Months 2–3 are free; payments resume in month 4. Monthly service includes hosting, routine security and maintenance, plus up to 30 minutes of minor content edits each month. Unused edit time does not roll over. Cancel anytime; the hosted subscription site goes offline at the end of the paid service period unless purchased outright.</p>
+        <p><strong>Monthly plans:</strong> Your initial payment ($184 for Starter, $254 for Business, or $396 for Premium) covers website creation and your first 90 days of hosting and maintenance. After 90 days, automatic monthly billing begins at $59, $79, or $99 per month, respectively. Monthly service includes hosting, routine security and maintenance, plus up to 30 minutes of minor content edits each month. Unused edit time does not roll over. Cancel anytime; the hosted subscription site goes offline at the end of the paid service period unless purchased outright.</p>
         <p><strong>One-time plans:</strong> The listed price covers the agreed website and transfer of its files, subject to third-party asset licenses. Domain registration, hosting, ongoing changes and maintenance are separate; optional managed hosting and maintenance is $39/month. You always own your domain name and business content.</p>
         <p>New pages, extensive redesigns, specialized functionality, or requests outside package scope require a separate agreement. Every purchase is subject to project-scope confirmation; if it isn't a fit, you may choose an upgrade or receive a full refund before work starts.</p>
       </div></details>
@@ -83,7 +83,7 @@
           <div><span class="vm-hosting-icon" aria-hidden="true">♢</span><strong>Built-In<br>Security</strong></div>
           <div><span class="vm-hosting-icon" aria-hidden="true">↻</span><strong>Updates<br>&amp; Support</strong></div>
         </div>
-        <div class="vm-hosting-rate"><strong>Hosting &amp; Maintenance Plan</strong><b>$39<small>/month</small></b><span>Optional for one-time purchases. Hosting &amp; maintenance are already included in monthly subscriptions.</span></div>
+        <div class="vm-hosting-rate"><strong>Hosting &amp; Maintenance Plan</strong><b>$39<small>/month</small></b><span>Optional for one-time purchases. Hosting &amp; maintenance are already included in monthly subscriptions.</span><a class="vm-coral-btn" href="https://buy.stripe.com/aFa8wP6wY55C9XregmcMM03" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to hosting and maintenance for $39 per month">Get Hosting &amp; Maintenance <span aria-hidden="true">»</span></a></div>
       </div>
     </section>
 
@@ -99,8 +99,8 @@
     <button type="button" id="checkout-close" class="vm-dialog-close" aria-label="Close checkout details">×</button>
     <p class="vm-dialog-eyebrow">Review your selection</p><h2 id="checkout-heading">Ready to Begin?</h2>
     <p id="checkout-choice" class="vm-checkout-choice"></p>
-    <dl class="vm-checkout-summary"><div><dt>Plan price</dt><dd id="checkout-price"></dd></div><div><dt>Setup fee</dt><dd id="checkout-setup"></dd></div><div class="vm-checkout-total"><dt>Due today</dt><dd id="checkout-due"></dd></div></dl>
-    <p id="checkout-subscription-note" class="vm-checkout-extra">With a subscription, the second and third months are free. Regular monthly billing resumes in month 4.</p>
+    <dl class="vm-checkout-summary"><div><dt>Ongoing plan price</dt><dd id="checkout-price"></dd></div><div><dt>Initial 90-day package</dt><dd id="checkout-setup"></dd></div><div class="vm-checkout-total"><dt>Due today</dt><dd id="checkout-due"></dd></div></dl>
+    <p id="checkout-subscription-note" class="vm-checkout-extra">Your initial payment covers website creation and the first 90 days of service. Automatic monthly billing starts after 90 days.</p>
     <p class="vm-checkout-policy">Payment comes first. I’ll review your project requirements before work begins. If your request is outside the purchased package, we’ll discuss an upgrade or provide a full refund before starting.</p>
     <label class="vm-checkout-consent"><input type="checkbox" id="checkout-acknowledge"> I understand the package scope and billing terms.</label>
     <button type="button" id="checkout-continue" class="vm-coral-btn vm-checkout-next" disabled>Continue to Secure Checkout →</button>
