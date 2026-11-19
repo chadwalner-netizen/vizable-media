@@ -149,7 +149,11 @@
       formData.set('requestType',mode === 'call' ? 'Free callback request' : 'Website message');
       formData.set('_subject',mode === 'call' ? 'Vizable Media — Callback Request' : 'Vizable Media — New Message');
       submit.disabled = true;
-      status.textContent = 'Sending your request…';
+      submit.classList.add('vm-is-sending');
+      submit.setAttribute('aria-busy', 'true');
+      submit.textContent = 'Sending Your Request... Please Wait';
+      buttons.forEach(button => button.disabled = true);
+      status.textContent = 'Please wait while your request is sent.';
       status.dataset.state = 'pending';
       try {
         const response = await fetch(endpoint,{method:'POST',body:formData,headers:{Accept:'application/json'}});
@@ -160,7 +164,13 @@
       } catch (_) {
         status.textContent = 'The message could not be sent. Please try again later.';
         status.dataset.state = 'error';
-      } finally { submit.disabled = false; }
+      } finally {
+        submit.disabled = false;
+        submit.classList.remove('vm-is-sending');
+        submit.removeAttribute('aria-busy');
+        submit.textContent = mode === 'call' ? 'Request My Free Call →' : 'Send My Message →';
+        buttons.forEach(button => button.disabled = false);
+      }
     });
   }
 

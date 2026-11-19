@@ -422,3 +422,10 @@ body > footer .logo .vm-logo-wordmark b,body > footer .footer-accent { color:var
 /* Final About heading alignment and scale */
 .vm-about-story-copy #about-story-heading { margin-left:0 !important; font-size:clamp(26px,2.65vw,36px) !important; line-height:1.12 !important; }
 @media(max-width:650px){.vm-about-story-copy #about-story-heading{margin-left:0 !important;font-size:clamp(25px,6vw,34px) !important;white-space:normal !important; text-align:left !important;}}
+
+/* Clear feedback during the Formspree round trip; applies to both contact modes. */
+#contact-submit.vm-is-sending { cursor:wait; opacity:.83; }
+#contact-submit.vm-is-sending::before { content:""; display:inline-block; width:1em; height:1em; margin-right:.65em; vertical-align:-.14em; border:2px solid rgba(255,255,255,.4); border-top-color:#fff; border-radius:50%; animation:vm-send-spin .75s linear infinite; }
+.vm-contact-tabs button:disabled { cursor:wait; }
+@keyframes vm-send-spin { to { transform:rotate(360deg); } }
+@media (prefers-reduced-motion:reduce) { #contact-submit.vm-is-sending::before { animation:none; border-top-color:#fff; } }
