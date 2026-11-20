@@ -11,6 +11,18 @@
     'premium-onetime': {name:'Premium',mode:'One-Time Purchase',price:'$999',setup:'None',due:'$999'}
   };
 
+  // Combined Stripe links: one-time website purchase + $39/month hosting.
+  const hostingCheckoutLinks = {
+    'starter-onetime': 'https://buy.stripe.com/fZubJ12gIapW4D77RYcMM07',
+    'business-onetime': 'https://buy.stripe.com/aFaaEX7B20PmedH4FMcMM08',
+    'premium-onetime': 'https://buy.stripe.com/6oU28r6wY1Tq0mR0pwcMM09'
+  };
+  const hostingDue = {
+    'starter-onetime': '$538',
+    'business-onetime': '$788',
+    'premium-onetime': '$1,038'
+  };
+
   // Pricing selection, with one price per card and only the relevant terms visible.
   const monthlyButton = byId('monthly-tab');
   const onceButton = byId('onetime-tab');
@@ -37,6 +49,9 @@
   const checkoutMessage = byId('checkout-message');
   const checkoutAcknowledge = byId('checkout-acknowledge');
   const checkoutContinue = byId('checkout-continue');
+  const hostingCheckbox = byId('checkout-add-hosting');
+  const hostingOption = byId('checkout-hosting-option');
+  const hostingBilling = byId('checkout-hosting-billing');
   let selectedPackage = '';
   if (checkoutDialog && checkoutMessage && checkoutAcknowledge && checkoutContinue) {
     document.querySelectorAll('[data-checkout]').forEach(button => {
@@ -54,19 +69,31 @@
         setupRow.querySelector('dt').textContent = 'Initial 90-day package';
         byId('checkout-price').parentElement.querySelector('dt').textContent = isMonthly ? 'Ongoing plan price' : 'Website purchase';
         byId('checkout-subscription-note').hidden = !isMonthly;
-        byId('checkout-onetime-hosting-note').hidden = isMonthly;
+        if (hostingOption && hostingCheckbox) {
+          hostingOption.hidden = isMonthly;
+          hostingCheckbox.checked = false; // Never preselect a recurring subscription.
+        }
         checkoutAcknowledge.checked = false;
         checkoutContinue.disabled = true;
         checkoutMessage.textContent = '';
         checkoutDialog.showModal();
       });
     });
+    if (hostingCheckbox) hostingCheckbox.addEventListener('change', () => {
+      if (!priceData[selectedPackage] || selectedPackage.endsWith('-monthly')) return;
+      const added = hostingCheckbox.checked;
+      byId('checkout-due').textContent = added ? hostingDue[selectedPackage] : priceData[selectedPackage].due;
+      if (hostingBilling) hostingBilling.textContent = added
+        ? 'Includes $39 for the first month of hosting. Hosting renews at $39/month until canceled.'
+        : 'Hosting is optional. Leave this unchecked to purchase the website only.';
+    });
     checkoutAcknowledge.addEventListener('change',() => { checkoutContinue.disabled = !checkoutAcknowledge.checked; });
     byId('checkout-close').addEventListener('click',() => checkoutDialog.close());
     checkoutDialog.addEventListener('click',event => { if(event.target === checkoutDialog) checkoutDialog.close(); });
     checkoutContinue.addEventListener('click',() => {
       if (!checkoutAcknowledge.checked || !priceData[selectedPackage]) return;
-      const address = config.checkoutLinks?.[selectedPackage] || '';
+      const withHosting = hostingCheckbox && hostingCheckbox.checked && selectedPackage.endsWith('-onetime');
+      const address = (withHosting ? hostingCheckoutLinks[selectedPackage] : config.checkoutLinks?.[selectedPackage]) || '';
       try {
         const url = new URL(address);
         if(url.protocol === 'https:' && (url.hostname === 'buy.stripe.com' || url.hostname === 'checkout.stripe.com' || url.hostname.endsWith('.stripe.com'))) {
