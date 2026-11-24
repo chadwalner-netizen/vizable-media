@@ -254,3 +254,138 @@ body:has(.contact-main) .contact-main{padding-bottom:60px}
 .contact-info .info-icon{display:grid;place-items:center;width:66px;height:66px;min-width:66px;box-sizing:border-box;padding:0}
 .contact-info .info-icon svg.contact-icon{display:block;width:46px;height:46px;min-width:46px;stroke-width:1.7;overflow:visible;margin:0}
 @media(max-width:570px){.contact-info .info-icon{width:60px;height:60px;min-width:60px}.contact-info .info-icon svg.contact-icon{width:43px;height:43px;min-width:43px}}
+
+/* Nov 23: mobile image readability, treatment spacing, and unobstructed return navigation. */
+@media(max-width:800px){
+ .hero-photo{background-image:linear-gradient(90deg,rgba(16,12,10,.92) 0%,rgba(16,12,10,.68) 45%,rgba(16,12,10,.27) 100%),url('assets/hero.jpg');background-position:60% center;}
+ .treat-hero-image{background-image:linear-gradient(90deg,rgba(16,12,10,.91) 0%,rgba(16,12,10,.63) 48%,rgba(16,12,10,.25) 100%),url('assets/hero.jpg');background-position:60% center;}
+ .treatment-intro{padding-bottom:38px;}
+ .treatment-list{gap:24px;}
+ .closing{min-height:0;display:flex;flex-direction:column;align-items:center;padding:28px 16px 20px;gap:0;border-top:1px solid #b48a46;}
+ .closing-brand{border:0;width:100%;padding:0 0 12px;}
+ .closing-message{padding:8px 8px 4px;}
+ .closing-message p{margin:12px 0 4px;}
+ footer{padding:14px 16px 18px;line-height:1.5;}
+ .vm-portfolio-return{position:static;display:table;width:max-content;max-width:calc(100% - 32px);margin:0 auto 18px;text-align:center;}
+}
+@media(max-width:570px){
+ .hero-photo{background-position:62% center;}
+ .hero-content{position:relative;z-index:1;}
+ .hero h1{font-size:clamp(49px,13vw,62px);line-height:.95;max-width:95%;}
+ .treat-hero-image{background-position:62% center;}
+ .treat-hero h1{font-size:clamp(43px,11.7vw,56px);overflow-wrap:break-word;}
+ .treatment-copy .treat-number,.treatment-copy h3{align-self:center;text-align:center;}
+ .treatment-copy .treatment-tags{align-self:center;justify-content:center;}
+ .treatment-copy p{text-align:left;}
+ .treatment-intro{padding-bottom:30px;}
+ .treatment-list{gap:20px;}
+ .treatment-detail{border-radius:12px;}
+ .treat-cta{padding:48px 0 52px;border-top:1px solid #8d6536;border-bottom:1px solid #8d6536;}
+ .contact-form-panel .eyebrow,.contact-form-panel h3,.contact-form-panel .form-intro{text-align:center;}
+ .contact-form-panel .eyebrow{display:block;}
+ .contact-form-panel .button{display:flex;width:100%;justify-content:center;text-align:center;}
+ .contact-side-content>.eyebrow,.contact-side-content>h3,.contact-side-content>p{text-align:center;}
+ .closing{padding:24px 14px 14px;}
+ .closing-brand{font-size:34px;}
+ .closing-brand .lotus-svg{width:78px;height:78px;}
+ .closing-message h2{font-size:27px;}
+}
+
+
+/* Nov 23 final Lumiere mobile refinement. Preserve editorial left-aligned body copy. */
+@media (max-width:800px){
+  /* Keep the model visible in both photo-led hero sections. */
+  .hero-photo{background-position:64% center;}
+  .treat-hero-image{background-position:64% center;}
+  /* Tighten the end of the treatment section without a double dividing band. */
+  .treatment-intro{padding-bottom:0!important;border-bottom:0!important;}
+  .treatment-intro>.wrap{padding-bottom:24px;}
+  .treatment-list{margin-bottom:0!important;padding-bottom:0!important;}
+  .treat-cta{margin-top:0!important;border-top:0!important;}
+  .treatment-copy .treat-number,.treatment-copy h3{text-align:center;align-self:center;}
+  .treatment-copy .treatment-tags{justify-content:center;align-self:center;}
+  .treatment-copy>p{text-align:left;}
+  .treatment-copy>.button{align-self:center;text-align:center;}
+  /* The return link should follow the footer instead of covering content. */
+  .vm-portfolio-return{position:static!important;display:table;margin:12px auto 20px!important;max-width:calc(100% - 28px);}
+  .closing{min-height:0!important;gap:0;}
+  .closing-message{padding-bottom:10px;}
+  .closing-message p{margin-bottom:10px;}
+  body:has(.contact-main) .closing-message .button{margin-top:10px;margin-bottom:12px;}
+  body:has(.contact-main) .closing-message p{margin-bottom:10px;}
+  footer{padding-top:12px;padding-bottom:12px;}
+}
+@media (max-width:570px){
+  .panel-topline{justify-content:center;gap:10px;}
+  .panel-topline .contact-icon{display:none;}
+  .contact-form-panel h3,.contact-form-panel .form-intro{text-align:center;}
+  .contact-side-content>.eyebrow,.contact-side-content>h3,.contact-side-content>p{text-align:center;}
+  .treatment-copy .treatment-tags{margin-left:auto;margin-right:auto;}
+  .treat-cta{padding-top:38px;padding-bottom:44px;}
+  .closing-brand{padding-bottom:6px;}
+}
+
+/* Nov 23 follow-up: three focused Lumiere mobile spacing fixes. */
+@media (max-width:800px) {
+  /* Let each treatment photograph meet the card's gold outline directly. */
+  .treatment-detail { padding:0!important; row-gap:0!important; align-content:start; }
+  .treatment-detail .treatment-image { display:block; margin:0!important; padding:0!important; min-height:0!important; height:260px; max-height:none!important; line-height:0; overflow:hidden; }
+  .treatment-detail .treatment-image img { display:block; width:100%; height:100%; min-height:0!important; max-height:none!important; margin:0!important; padding:0!important; object-fit:cover; }
+  /* Remove the dark spacer before the photographic closing invitation. */
+  .treatment-intro { padding-bottom:0!important; }
+  .treatment-intro>.wrap { padding-bottom:0!important; }
+  .treatment-list { margin-bottom:0!important; padding-bottom:0!important; }
+  .treat-cta { margin-top:0!important; border-top:1px solid #8d6536!important; background-position:center center; }
+  /* Make the footer consultation action breathe below its introductory copy. */
+  .closing-message p { margin-bottom:22px!important; }
+  .closing-message .button { margin-top:0!important; }
+}
+@media (max-width:570px) {
+  .treatment-detail .treatment-image { height:240px; }
+}
+
+
+/* Services page corrections: source image borders cropped from JPEGs. */
+body:has(.treatment-list) .treatment-detail .treatment-image {padding:0;overflow:hidden;min-height:0;}
+body:has(.treatment-list) .treatment-detail .treatment-image img {display:block;width:100%;height:100%;min-height:0;object-fit:cover;margin:0;transform:none;}
+body:has(.treatment-list) .treatment-detail:hover img {transform:none;}
+/* The services closing area is text-and-brand only, with no stray left photograph. */
+body:has(.treatment-list) .closing {grid-template-columns:42% 58%;}
+body:has(.treatment-list) .closing-photo {display:none;}
+body:has(.treatment-list) .closing-brand {min-width:0;}
+/* The cropped background no longer contains the baked-in horizontal stripe. */
+body:has(.treatment-list) .treat-cta {background-position:center center;}
+@media(max-width:800px){
+ body:has(.treatment-list) .treatment-detail .treatment-image {height:240px;min-height:0;max-height:none;}
+ body:has(.treatment-list) .treatment-detail .treatment-image img {height:100%;min-height:0;max-height:none;}
+ body:has(.treatment-list) .treatment-intro {padding-bottom:0;}
+ body:has(.treatment-list) .treatment-intro>.wrap {padding-bottom:0;}
+ body:has(.treatment-list) .treat-cta {padding-top:38px;padding-bottom:44px;}
+ body:has(.treatment-list) .treat-hero {min-height:0;}
+ body:has(.treatment-list) .treat-hero-inner {padding-top:42px;padding-bottom:42px;}
+ body:has(.treatment-list) .closing {display:flex;flex-direction:column;align-items:center;}
+ body:has(.treatment-list) .closing-brand {border-right:0;width:100%;}
+}
+
+/* Home portfolio cards: eliminate the visible dark lip at the top of the photos.
+   Scoped to Home; Services treatment cards remain unchanged. */
+body:has(.services .cards) .services .cards article {padding:0;overflow:hidden;}
+body:has(.services .cards) .services .cards article > img {
+  display:block;width:100%;margin:-14px 0 0;padding:0;
+  height:calc(255px + 14px);object-fit:cover;object-position:center;
+}
+/* Shared desktop closing banner: photograph | logo | tagline on every page. */
+@media (min-width:801px) {
+  body:has(.treatment-list) .closing {display:grid;grid-template-columns:32% 24% 44%;}
+  body:has(.treatment-list) .closing-photo {display:block;}
+  body:has(.treatment-list) .closing-brand {border-right:1px solid #b48a46;}
+}
+@media (max-width:1100px) and (min-width:801px) {
+  body:has(.services .cards) .services .cards article > img {height:calc(190px + 14px);}
+}
+@media (max-width:800px) {
+  body:has(.services .cards) .services .cards article > img {height:calc(150px + 14px);}
+}
+@media (max-width:570px) {
+  body:has(.services .cards) .services .cards article > img {height:calc(220px + 14px);}
+}

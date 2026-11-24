@@ -9,12 +9,32 @@
   <link rel="stylesheet" href="theme-seafoam.css?v=1">
   <link rel="stylesheet" href="reference-match.css?v=1">
   <link rel="stylesheet" href="site-final.css?v=20261118b0261118b">
-</head>
+<link rel="stylesheet" href="faq.css?v=2"><link rel="stylesheet" href="preview-v2.css"><style>
+/* About V1 — page-local refinements */
+.vm-about-page .vm-about-hero h1 span,.vm-about-page .vm-about-story-copy h2 span,.vm-about-page .vm-about-values h2 span,.vm-about-page .vm-about-action h2 span{color:#e65d46!important;}
+.vm-about-page .vm-about-rule p{line-height:1.5!important;}
+.vm-about-page .vm-about-value-grid svg{box-sizing:border-box;width:60px;height:60px;padding:13px;background:linear-gradient(135deg,#293346,#405963);border-radius:14px;stroke:#f08b73;box-shadow:0 4px 9px #0002;}
+.vm-about-page .vm-about-action .vm-coral-btn{border-radius:12px!important;}
+@media(max-width:650px){
+.vm-about-page .vm-about-hero h1{font-size:clamp(28px,8vw,43px)!important;line-height:1.08!important;}
+.vm-about-page .vm-about-hero-copy{padding-bottom:16px!important;}
+.vm-about-page .vm-about-hero-copy p{font-size:clamp(16px,4.6vw,20px)!important;line-height:1.3!important;}
+.vm-about-page .vm-about-portrait{mask-image:linear-gradient(to bottom,transparent 0%,black 15%,black 65%,transparent 100%)!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 15%,black 65%,transparent 100%)!important;}
+.vm-about-page .vm-about-value-grid article{min-height:0!important;padding:17px 12px 19px!important;}
+.vm-about-page .vm-about-action h2{font-size:clamp(26px,7.3vw,38px)!important;line-height:1.1!important;}
+.vm-about-page .vm-about-action p{font-size:17px!important;line-height:1.35!important;}
+}
+@media(max-width:850px){
+body > footer .foot {flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:16px!important;}
+body > footer .foot > .foot-brand,body > footer .foot > .foot-links,body > footer .foot > .foot-note {flex:0 0 auto!important;width:100%!important;height:auto!important;min-height:0!important;box-sizing:border-box;}
+body > footer .foot > .foot-links {align-content:center!important;align-items:center!important;justify-content:center!important;row-gap:14px!important;column-gap:12px!important;padding:14px 0!important;}
+body > footer .foot > .foot-note {text-align:center!important;}
+}</style></head>
 <body>
   <header class="ref-site-header"><div class="ref-header-inner">
     <a class="ref-brand" href="index.html" aria-label="Vizable Media home"><span class="vm-brand-mark" aria-hidden="true"></span><span class="ref-brand-rule" aria-hidden="true"></span><span class="ref-brand-type"><strong>Vizable <em>Media</em></strong><small>— Premium Websites. Pedestrian Prices. —</small></span></a>
     <button id="menu" class="ref-menu-button" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">☰</button>
-    <nav id="nav" class="ref-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="work.html">Our Work</a><a href="pricing.html">Pricing</a><a href="about.html" class="active" aria-current="page">About</a><a href="process.html">How It Works</a><a href="contact.html">Contact</a></nav>
+    <nav id="nav" class="ref-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="work.html">Our Work</a><a href="pricing.html">Pricing</a><a href="about.html" class="active" aria-current="page">About</a><a href="process.html">How It Works</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
   </div></header>
   <main class="vm-about-page">
     <section class="vm-about-hero" aria-labelledby="about-heading">
@@ -29,8 +49,9 @@
         <div class="vm-about-story-copy">
           <h2 id="about-story-heading">Hello, I’m <span>Chad</span></h2>
           <div class="vm-about-rule">
-            <p>I started Vizable Media because I believe small businesses deserve beautiful, professional websites without paying big-agency prices.</p>
-            <p>As publisher of <em>The Boynton Weekly</em>, I've seen firsthand how important a strong online presence is for local businesses. When you work with Vizable Media, you work directly with me—from the first conversation to the finished website.</p>
+            <p>I founded Vizable Media with a simple belief: small businesses deserve exceptional websites without the big-agency price tag.</p>
+            <p>As the publisher of <em>The Boynton Weekly</em>, I understand the challenges local businesses face in standing out and attracting new customers.</p>
+            <p>When you choose Vizable Media, you work directly with me. No middlemen. No complicated processes. Just personal attention, professional design and a website built around your business.</p>
           </div>
         </div>
         <svg class="vm-about-story-art" viewBox="510 393 644 322" role="img" aria-label="Coastal Home Services website on a laptop and smartphone beside a coffee mug"><image href="about-approved.png" width="1199" height="1312"></image></svg>
@@ -50,7 +71,7 @@
     </section>
     <section class="vm-about-action" aria-labelledby="about-action-heading"><h2 id="about-action-heading">Let's Build Something <span>Great Together.</span></h2><p>Your business deserves a website that makes a great first impression.</p><a class="vm-coral-btn" href="contact.html">Let's Talk About Your Website <span aria-hidden="true">»</span></a></section>
   </main>
-  <footer><div class="wrap foot"><div class="foot-brand"><a class="logo" href="index.html"><span class="vm-footer-mark" aria-hidden="true"></span><span class="vm-logo-wordmark">Vizable <b>Media</b></span></a><p>Premium Websites. <span class="footer-accent">Pedestrian Prices.</span></p></div><div class="foot-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="work.html">Our Work</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="process.html">How It Works</a><a href="contact.html">Contact</a></div><div class="foot-note">© Vizable Media<br>Website design for small businesses</div></div></footer>
+  <footer><div class="wrap foot"><div class="foot-brand"><a class="logo" href="index.html"><span class="vm-footer-mark" aria-hidden="true"></span><span class="vm-logo-wordmark">Vizable <b>Media</b></span></a><p>Premium Websites. <span class="footer-accent">Pedestrian Prices.</span></p></div><div class="foot-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="work.html">Our Work</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="process.html">How It Works</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="terms.html">Terms &amp; Conditions</a><a href="privacy.html">Privacy Policy</a></div><div class="foot-note">© Vizable Media<br>Website design for small businesses</div></div></footer>
   <script src="script.js"></script>
 </body>
 </html>

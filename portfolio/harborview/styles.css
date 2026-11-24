@@ -228,3 +228,58 @@ body{background:#fffdfa}
   .cta .wrap>div{width:100%}
   .cta .wrap .btn{align-self:center;text-align:center;max-width:100%;white-space:normal}
 }
+
+/* Nov 23: homepage-only mobile balance. */
+@media(max-width:650px){
+ .hero.home .wrap{text-align:center;}
+ .hero.home h1,.hero.home p{margin-left:auto;margin-right:auto;}
+ .hero.home .underline{margin-left:auto;margin-right:auto;max-width:85%;}
+ .hero.home .actions,.hero.home .buttons{display:flex;flex-direction:column;align-items:center;gap:12px;}
+ .hero.home .actions .btn,.hero.home .buttons .btn{width:min(100%,310px);text-align:center;justify-content:center;}
+ .section .split .home-partner-copy>h2{text-align:center;}
+ .section .split .home-partner-copy>p{text-align:left;}
+}
+
+
+/* Nov 23 final Harborview mobile polish: hero action and contact form header. */
+@media (max-width:650px){
+  .hero.home .actions .btn{
+    box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;
+    width:min(100%,340px);max-width:100%;padding:15px 12px;
+    font-size:clamp(15px,4.1vw,19px);line-height:1.25;white-space:nowrap;
+    letter-spacing:-.2px;
+  }
+  .form-heading{text-align:center;}
+  .form-heading h2{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;line-height:1.12;}
+  .form-heading .form-icon{margin:0 auto;width:44px;height:44px;flex:0 0 44px;}
+  .form-heading p{text-align:center;margin:12px auto 0;max-width:30ch;line-height:1.4;}
+}
+
+/* Final approved Services-card alignment: headings, icons, descriptions and buttons. */
+.cards .card h2{justify-content:center;text-align:center;}
+.cards .card h2 .service-icon{flex-shrink:0;}
+.cards .card p{text-align:center;max-width:38ch;margin-left:auto;margin-right:auto;}
+.cards .card .btn{align-self:center;text-align:center;}
+
+/* Mobile header only: center branding and phone as separate rows. */
+@media (max-width:650px){
+  .header .nav{flex-direction:column;flex-wrap:nowrap;align-items:center;justify-content:center;}
+  .header .nav .brand{order:0;align-self:center;justify-content:center;width:fit-content;max-width:100%;margin:0 auto;}
+  .header .nav .brand img{flex-shrink:0;}
+  .header .nav .brand>span{min-width:0;text-align:left;}
+  .header .nav .brand strong{font-size:clamp(24px,8.2vw,34px);}
+  .header .nav .brand small{font-size:clamp(8px,2.8vw,12px);letter-spacing:clamp(1px,.85vw,3.7px);}
+  .header .nav .phone{order:1;align-self:center;margin:0 auto;}
+  .header .nav .links{order:3;}
+}
+
+/* Center the visible brand group, not an oversized wrapping text box. */
+@media (max-width:650px){
+ .header .nav .brand{display:grid;grid-template-columns:auto auto;gap:12px;width:max-content;max-width:100%;justify-content:center;align-items:center;}
+ .header .nav .brand>span{width:max-content;max-width:100%;}
+ .header .nav .brand strong{width:max-content;max-width:100%;}
+ .header .nav .brand small{white-space:nowrap;font-size:clamp(7px,2.65vw,12px);letter-spacing:clamp(1px,.72vw,3px);}
+ .header .nav .brand img{width:clamp(44px,16vw,60px);height:auto;}
+}
+
+@media(max-width:650px){.header .nav .brand strong>span{display:block;} .header .nav .brand strong{white-space:nowrap;} }

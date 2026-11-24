@@ -69,6 +69,8 @@
         setupRow.querySelector('dt').textContent = 'Initial 90-day package';
         byId('checkout-price').parentElement.querySelector('dt').textContent = isMonthly ? 'Ongoing plan price' : 'Website purchase';
         byId('checkout-subscription-note').hidden = !isMonthly;
+        const ownershipNote = byId('checkout-ownership-note');
+        if (ownershipNote) ownershipNote.hidden = !isMonthly;
         if (hostingOption && hostingCheckbox) {
           hostingOption.hidden = isMonthly;
           hostingCheckbox.checked = false; // Never preselect a recurring subscription.
@@ -84,7 +86,7 @@
       const added = hostingCheckbox.checked;
       byId('checkout-due').textContent = added ? hostingDue[selectedPackage] : priceData[selectedPackage].due;
       if (hostingBilling) hostingBilling.textContent = added
-        ? 'Includes $39 for the first month of hosting. Hosting renews at $39/month until canceled.'
+        ? 'Due today includes the website price plus $39 for your first month of hosting. Hosting then renews at $39/month until canceled.'
         : 'Hosting is optional. Leave this unchecked to purchase the website only.';
     });
     checkoutAcknowledge.addEventListener('change',() => { checkoutContinue.disabled = !checkoutAcknowledge.checked; });
