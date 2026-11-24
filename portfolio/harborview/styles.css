@@ -283,3 +283,14 @@ body{background:#fffdfa}
 }
 
 @media(max-width:650px){.header .nav .brand strong>span{display:block;} .header .nav .brand strong{white-space:nowrap;} }
+
+/* Final mobile-only spacing and benefit alignment. */
+@media (max-width:650px){
+  .strip + .section{padding-top:20px;}
+  .section .split .home-partner-copy>p{text-align:center;}
+  .cards{padding-bottom:18px;}
+  .benefits{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:10px;row-gap:12px;padding-inline:12px;}
+  .benefits>div{display:grid;grid-template-columns:36px minmax(0,100px);justify-content:center;align-items:center;gap:9px;text-align:left;line-height:1.35;}
+  .benefits .benefit-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;margin:0;}
+  .benefits .benefit-icon img{display:block;width:34px;height:34px;object-fit:contain;}
+}
