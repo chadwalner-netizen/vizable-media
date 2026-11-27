@@ -127,6 +127,30 @@
   .reference-home .ref-price-card .ref-price { position:relative; left:8px; }
 }
 </style>
+<style id="vm-home-hero-benefits">
+.reference-home .ref-hero-copy .vm-hero-intro { margin-bottom: 12px !important; }
+.reference-home .ref-hero-copy .vm-hero-benefits { list-style:none; padding:0; margin:0 0 20px; display:grid; gap:6px; color:#fff; text-align:left; font-size:16px; line-height:1.35; }
+.reference-home .vm-hero-benefits li { display:flex; align-items:baseline; gap:9px; margin:0; padding:0; }
+.reference-home .vm-hero-benefits li > span { color:#f18470; font-weight:800; flex:0 0 17px; }
+@media(min-width:901px){
+.reference-home .ref-hero-inner { min-height:430px !important; height:auto !important; }
+.reference-home .ref-hero-copy { padding-top:28px !important; padding-bottom:28px !important; }
+.reference-home .ref-hero-art { align-self:center; }
+}
+@media(max-width:900px){
+.reference-home .ref-hero-inner { height:auto !important; }
+.reference-home .ref-hero-copy .vm-hero-benefits { width:fit-content; max-width:100%; margin-inline:auto; font-size:15px; }
+}
+</style>
+<style id="vm-hero-benefits-emphasis">
+.reference-home .ref-hero-copy .vm-hero-intro {font-size:21px !important;line-height:1.4 !important;margin-bottom:16px !important;}
+.reference-home .vm-hero-price {color:#ff927d !important;font-weight:800;}
+.reference-home .ref-hero-copy .vm-hero-benefits {font-size:19px !important;font-weight:700;gap:9px;line-height:1.35;margin-bottom:22px;}
+.reference-home .vm-hero-benefits li {align-items:center;gap:11px;}
+.reference-home .vm-hero-benefits li > span {display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:23px;height:23px;flex:0 0 23px;border:1.7px solid #ff927d;border-radius:50%;color:#ff927d;font-size:16px;line-height:1;}
+@media(max-width:900px){.reference-home .ref-hero-copy .vm-hero-intro{font-size:18px !important;}.reference-home .ref-hero-copy .vm-hero-benefits{font-size:17px !important;gap:8px;}}
+@media(max-width:420px){.reference-home .ref-hero-copy .vm-hero-benefits{font-size:16px !important;}.reference-home .vm-hero-benefits li{gap:8px;}}
+</style>
 </head>
 <body class="reference-home">
 <header class="ref-site-header">
@@ -152,7 +176,14 @@
 <div class="ref-hero-inner">
 <div class="ref-hero-copy">
 <h1 id="ref-hero-title">Premium Websites.<br/><em>Surprisingly Affordable.</em></h1>
-<p>Custom-designed websites for small businesses.<br/>Professional results, personal service, and<br class="ref-wide-only"/> plans starting at $59/month.</p>
+<p class="vm-hero-intro">Custom websites for small businesses.<br/>Plans starting at just <strong class="vm-hero-price">$59/month.</strong></p>
+<ul class="vm-hero-benefits" role="list">
+<li><span aria-hidden="true">✓</span>Professionally Designed</li>
+<li><span aria-hidden="true">✓</span>Mobile Optimized</li>
+<li><span aria-hidden="true">✓</span>Fast Loading</li>
+<li><span aria-hidden="true">✓</span>Search Engine Optimized</li>
+<li><span aria-hidden="true">✓</span>Built to Convert Visitors Into Customers</li>
+</ul>
 <a class="ref-button ref-hero-cta" href="contact.html">Let’s Talk About Your Website <span aria-hidden="true">→</span></a>
 </div>
 <div aria-label="Sample Palm and Stone Landscaping website displayed on a laptop and smartphone" class="ref-hero-art" role="img">
